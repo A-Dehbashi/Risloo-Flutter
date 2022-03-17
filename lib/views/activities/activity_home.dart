@@ -29,18 +29,27 @@ class _ActivityHome extends State<ActivityHome> {
         key: _scaffoldKey,
         backgroundColor: ResColors.coolGray50,
 
-        endDrawer: ComponentHomeDrawer(currentIndex: _currentIndex, callback: (int index) {
+        endDrawer: ComponentHomeDrawer(
+          currentIndex: _currentIndex,
+          callback: (int index) {
             navigateTo(index);
           },
         ),
 
-        body: ComponentHomeBody(scaffoldKey: _scaffoldKey, currentIndex: _currentIndex),
+        body: ComponentHomeBody(
+          scaffoldKey: _scaffoldKey,
+          currentIndex: _currentIndex,
+          callback: (int index) {
+            navigateTo(index);
+          },
+        ),
+
       ),
     );
   }
 
   void navigateTo(int index) {
-    if(_scaffoldKey.currentState!.isEndDrawerOpen) {
+    if (_scaffoldKey.currentState!.isEndDrawerOpen) {
       Navigator.pop(context);
     }
 

@@ -8,9 +8,11 @@ import 'package:risloo_flutter/views/components/component_home_host.dart';
 class ComponentHomeBody extends StatelessWidget {
 
   final GlobalKey<ScaffoldState> scaffoldKey;
+
+  final Function callback;
   final int currentIndex;
 
-  const ComponentHomeBody({Key? key, required this.scaffoldKey, required this.currentIndex}) : super(key: key);
+  const ComponentHomeBody({Key? key, required this.scaffoldKey, required this.callback, required this.currentIndex}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class ComponentHomeBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const ComponentHomeToolbar(),
+              ComponentHomeToolbar(callback: callback),
               ComponentHomeButton(scaffoldKey: scaffoldKey),
             ],
           ),
