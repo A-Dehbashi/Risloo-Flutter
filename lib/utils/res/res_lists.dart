@@ -4,10 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:risloo_flutter/utils/res/res_strings.dart';
 
+import 'package:risloo_flutter/views/fragments/fragment_accounting.dart';
 import 'package:risloo_flutter/views/fragments/fragment_bulks.dart';
 import 'package:risloo_flutter/views/fragments/fragment_centers.dart';
 import 'package:risloo_flutter/views/fragments/fragment_dashboard.dart';
 import 'package:risloo_flutter/views/fragments/fragment_downloads.dart';
+import 'package:risloo_flutter/views/fragments/fragment_me.dart';
+import 'package:risloo_flutter/views/fragments/fragment_payments.dart';
 import 'package:risloo_flutter/views/fragments/fragment_samples.dart';
 import 'package:risloo_flutter/views/fragments/fragment_scales.dart';
 import 'package:risloo_flutter/views/fragments/fragment_sessions.dart';
@@ -60,6 +63,25 @@ class ResLists {
     FontAwesomeIcons.usersCog,
     FontAwesomeIcons.balanceScale,
     FontAwesomeIcons.arrowAltCircleDown,
+  ];
+
+  //////////////////////////////////////////////////
+
+  // Toolbar Lists
+  //////////////////////////////////////////////////
+
+  static const List<Widget> toolbarRoutes = [
+    FragmentMe(),
+    FragmentAccounting(),
+    FragmentPayments(),
+    FragmentDashboard(),
+  ];
+
+  static const List<String> toolbarTitles = [
+    ResStrings.toolbarTitleMe,
+    ResStrings.toolbarTitleAccounting,
+    ResStrings.toolbarTitlePayments,
+    ResStrings.toolbarTitleLogout,
   ];
 
   //////////////////////////////////////////////////
