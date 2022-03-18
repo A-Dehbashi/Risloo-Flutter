@@ -7,15 +7,19 @@ import 'package:risloo_flutter/utils/res/res_strings.dart';
 
 class ComponentHomeBreadcump extends StatelessWidget {
 
+  // Vars
   final int currentIndex;
 
+  // Constructor
   const ComponentHomeBreadcump({Key? key, required this.currentIndex}) : super(key: key);
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.fromLTRB(12.0, 16.0, 12.0, 12.0),
+
       child: Text(
         currentIndex == 0 ? ResStrings.dashboardWelcome : ResStrings.dashboardTitle + "  >  " +  ResLists.drawerTitles[currentIndex],
         textDirection: TextDirection.rtl,

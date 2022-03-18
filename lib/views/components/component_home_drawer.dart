@@ -8,17 +8,22 @@ import 'package:risloo_flutter/views/components/component_drawer_header.dart';
 
 class ComponentHomeDrawer extends StatelessWidget {
 
+  // Vars
   final Function callback;
   final int currentIndex;
 
+  // Constructor
   const ComponentHomeDrawer({Key? key, required this.callback, required this.currentIndex}) : super(key: key);
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: ResColors.coolGray50,
+
       child: Directionality(
         textDirection: TextDirection.rtl,
+
         child: ListView(
           children: <Widget>[
             const ComponentDrawerHeader(),
@@ -27,7 +32,11 @@ class ComponentHomeDrawer extends StatelessWidget {
               child: ListView.builder(
                 itemCount: ResLists.drawerTitles.length,
                 itemBuilder: (context, index) {
-                  return ComponentDrawerItem(callback: callback, index: index, currentIndex: currentIndex);
+                  return ComponentDrawerItem(
+                    index: index,
+                    callback: callback,
+                    currentIndex: currentIndex,
+                  );
                 },
               ),
             ),

@@ -14,17 +14,20 @@ class ActivityHome extends StatefulWidget {
 
 class _ActivityHome extends State<ActivityHome> {
 
+  // Vars
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   int _currentIndex = 0;
   List<int> _backstack = [0];
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
         return customPop(context);
       },
+
       child: Scaffold(
         key: _scaffoldKey,
         backgroundColor: ResColors.coolGray50,
@@ -77,8 +80,10 @@ class _ActivityHome extends State<ActivityHome> {
 
       return Future.value(false);
     } else if (_backstack.length > 1) {
-      _backstack.removeAt(_backstack.length - 1);
-      navigateBack(_backstack[_backstack.length - 1]);
+      int _prevIndex = _backstack.length - 1;
+
+      _backstack.removeAt(_prevIndex);
+      navigateBack(_backstack[_prevIndex]);
 
       return Future.value(false);
     } else {

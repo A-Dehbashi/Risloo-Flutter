@@ -5,12 +5,16 @@ import 'package:risloo_flutter/utils/res/res_fonts.dart';
 import 'package:risloo_flutter/utils/res/res_strings.dart';
 
 class ComponentDrawerHeader extends StatelessWidget {
+
+  // Constructor
   const ComponentDrawerHeader({Key? key}) : super(key: key);
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 12.0),
+
       child: Text(
         ResStrings.appName,
         style: TextStyle(

@@ -7,13 +7,15 @@ import 'package:risloo_flutter/views/components/component_home_host.dart';
 
 class ComponentHomeBody extends StatelessWidget {
 
+  // Vars
   final GlobalKey<ScaffoldState> scaffoldKey;
-
   final Function callback;
   final int currentIndex;
 
+  // Constructor
   const ComponentHomeBody({Key? key, required this.scaffoldKey, required this.callback, required this.currentIndex}) : super(key: key);
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return SafeArea(

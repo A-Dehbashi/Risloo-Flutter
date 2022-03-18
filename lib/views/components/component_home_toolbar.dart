@@ -8,21 +8,26 @@ class ComponentHomeToolbar extends StatelessWidget {
 
   final List<int> aaa = [0, 1, 2, 3];
 
+  // Vars
   final Function callback;
 
+  // Constructor
   ComponentHomeToolbar({Key? key, required this.callback}) : super(key: key);
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return DropdownMenuItem(
       child: Container(
         height: 48.0,
         margin: const EdgeInsets.fromLTRB(12.0, 12.0, 6.0, 0.0),
+
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4.0),
             border: Border.all(color: ResColors.coolGray300, width: 1.0),
             shape: BoxShape.rectangle
         ),
+
         child: Padding(
           padding: const EdgeInsets.all(6.0),
           child: Stack(

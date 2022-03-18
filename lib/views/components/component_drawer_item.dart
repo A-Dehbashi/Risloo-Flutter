@@ -6,19 +6,24 @@ import 'package:risloo_flutter/utils/res/res_lists.dart';
 
 class ComponentDrawerItem extends StatelessWidget {
 
+  // Vars
   final Function callback;
   final int index, currentIndex;
 
+  // Constructor
   const ComponentDrawerItem({Key? key, required this.callback, required this.index, required this.currentIndex}) : super(key: key);
 
+  // Tree
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.fromLTRB(12.0, 4.0, 12.0, 4.0),
+
       decoration: BoxDecoration(
         color: index == currentIndex ? ResColors.risloo500 : ResColors.transparent,
         borderRadius: BorderRadius.circular(4.0),
       ),
-      margin: const EdgeInsets.fromLTRB(12.0, 4.0, 12.0, 4.0),
+
       child: ListTile(
         visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
         minLeadingWidth: 0.0,
