@@ -6,7 +6,7 @@ import 'package:risloo_flutter/utils/res/res_lists.dart';
 
 class ComponentHomeToolbar extends StatelessWidget {
 
-  final List<int> aaa = [0, 1, 2, 3];
+  final List<int> values = [0, 1, 2, 3];
 
   // Vars
   final Function callback;
@@ -72,25 +72,29 @@ class ComponentHomeToolbar extends StatelessWidget {
                 ),
               ),
               DropdownButtonHideUnderline(
-                child: DropdownButton<int>(
-                  iconSize: 0,
-                  items: aaa.map((int index) {
-                    return DropdownMenuItem<int>(
-                        value: index,
+                child: ButtonTheme(
+                  alignedDropdown: true,
+                  child: DropdownButton<int>(
+                    iconSize: 0,
+                    items: values.map((index) => DropdownMenuItem<int>(
+                      value: index,
+                      child: Align(
                         alignment: Alignment.center,
                         child: Text(
                           ResLists.toolbarTitles[index],
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             color: index == 3 ? ResColors.red600 : ResColors.coolGray700,
                             fontSize: 13.0,
                             fontFamily: ResFonts.danaMedium,
                           ),
                         ),
-                    );
-                  }).toList(),
-                  onChanged: (index) {
-                    callback(index);
-                  },
+                      ),
+                    )).toList(),
+                    onChanged: (index) {
+                      callback(index);
+                    },
+                  ),
                 ),
               ),
             ],
