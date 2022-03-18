@@ -29,45 +29,47 @@ class ComponentHomeToolbar extends StatelessWidget {
         ),
 
         child: Padding(
-          padding: const EdgeInsets.all(6.0),
+          padding: const EdgeInsets.fromLTRB(8.0, 6.0, 8.0, 6.0),
           child: Stack(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const <Widget>[
-                      Text(
-                        "امیر دهباشی",
-                        textDirection: TextDirection.rtl,
-                        style: TextStyle(
-                          color: ResColors.coolGray700,
-                          fontSize: 10.0,
-                          fontFamily: ResFonts.danaMedium,
+              SingleChildScrollView(
+                child: Row(
+                  children: <Widget>[
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text(
+                          "امیر دهباشی",
+                          textDirection: TextDirection.rtl,
+                          style: TextStyle(
+                            color: ResColors.coolGray700,
+                            fontSize: 11.0,
+                            fontFamily: ResFonts.danaDemiBold,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "100.000.000 تومان",
-                        textDirection: TextDirection.rtl,
-                        style: TextStyle(
-                          color: ResColors.emerald600,
-                          fontSize: 10.0,
-                          fontFamily: ResFonts.danaMedium,
-                        ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(width: 8.0),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(4.0),
-                    child: Image.asset(
-                      "assets/icon.png",
-                      width: 32.0,
-                      height: 32.0,
+                        Text(
+                          "100.000 تومان",
+                          textDirection: TextDirection.rtl,
+                          style: TextStyle(
+                            color: ResColors.emerald600,
+                            fontSize: 11.0,
+                            fontFamily: ResFonts.danaDemiBold,
+                          ),
+                        )
+                      ],
                     ),
-                  )
-                ],
+                    const SizedBox(width: 10.0),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(4.0),
+                      child: Image.asset(
+                        "assets/icon.png",
+                        width: 32.0,
+                        height: 32.0,
+                      ),
+                    )
+                  ],
+                ),
               ),
               DropdownButtonHideUnderline(
                 child: DropdownButton<int>(
@@ -80,10 +82,10 @@ class ComponentHomeToolbar extends StatelessWidget {
                           ResLists.toolbarTitles[index],
                           style: TextStyle(
                             color: index == 3 ? ResColors.red600 : ResColors.coolGray700,
-                            fontSize: 12.0,
-                            fontFamily: ResFonts.danaDemiBold,
+                            fontSize: 13.0,
+                            fontFamily: ResFonts.danaMedium,
                           ),
-                        )
+                        ),
                     );
                   }).toList(),
                   onChanged: (index) {
