@@ -80,10 +80,8 @@ class _ActivityHome extends State<ActivityHome> {
 
       return Future.value(false);
     } else if (_backstack.length > 1) {
-      int _prevIndex = _backstack.length - 1;
-
-      _backstack.removeAt(_prevIndex);
-      navigateBack(_backstack[_prevIndex]);
+      _backstack.removeAt(_backstack.length - 1);
+      navigateBack(_backstack[_backstack.length - 1]);
 
       return Future.value(false);
     } else {
