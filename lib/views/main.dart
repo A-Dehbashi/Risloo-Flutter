@@ -5,8 +5,8 @@ import 'package:risloo_flutter/utils/res/res_themes.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: ResRoutes.home,
-    routes: ResRoutes.routes,
+    initialRoute: ResRoutes.activityHome,
+    routes: ResRoutes.activityRoutes,
     theme: ResThemes.theme,
     darkTheme: ResThemes.darkTheme,
     debugShowCheckedModeBanner: false,

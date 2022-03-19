@@ -5,6 +5,9 @@ class ResStrings {
 
   static const String appName = 'ریسلو';
 
+  static const String appDebugNote = 'شما هم اکنون در نسخه آزمایشی هستید';
+  static const String appDebugClick = 'جهت انتقال به نسخه اصلی کلیک کنید';
+
   //////////////////////////////////////////////////
 
   // Drawer Strings
