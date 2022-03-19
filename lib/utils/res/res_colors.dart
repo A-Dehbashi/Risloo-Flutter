@@ -20,11 +20,13 @@ class ResColors {
   // Black and White Colors
   //////////////////////////////////////////////////
 
-  static const Color black50p = Color(0x80000000);
   static const Color black80p = Color(0xCC000000);
+  static const Color black50p = Color(0x80000000);
+  static const Color black20p = Color(0x33000000);
 
-  static const Color white50p = Color(0x80FFFFFF);
   static const Color white80p = Color(0xCCFFFFFF);
+  static const Color white50p = Color(0x80FFFFFF);
+  static const Color white20p = Color(0x33FFFFFF);
 
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
