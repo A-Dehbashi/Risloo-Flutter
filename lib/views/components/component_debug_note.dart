@@ -14,21 +14,25 @@ class ComponentHomeDebug extends StatelessWidget {
   // Tree
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Container(
-        width: double.infinity,
-        margin: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 0.0),
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 0.0),
 
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(4.0),
-            color: ResColors.red600,
-            shape: BoxShape.rectangle
-        ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4.0),
+        color: ResColors.red600,
+        shape: BoxShape.rectangle,
+      ),
 
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(12.0, 6.0, 12.0, 6.0),
-          child: IntrinsicHeight(
-            child: Row(
+      child: Material(
+        color: ResColors.transparent,
+        child: InkWell(
+          highlightColor: ResColors.transparent,
+          splashColor: ResColors.red800,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(12.0, 6.0, 12.0, 6.0),
+            child: IntrinsicHeight(
+              child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,14 +74,15 @@ class ComponentHomeDebug extends StatelessWidget {
                     color: ResColors.white,
                     size: 26.0,
                   ),
-                ]
+                ],
+              ),
             ),
           ),
+          onTap: () {
+            // TODO: Place Code When Needed
+          },
         ),
       ),
-      onTap: () {
-        // TODO: Place Code When Needed
-      },
     );
   }
 

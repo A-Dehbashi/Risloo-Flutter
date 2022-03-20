@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:risloo_flutter/views/components/component_debug_note.dart';
 
+import 'package:risloo_flutter/views/components/component_debug_note.dart';
 import 'package:risloo_flutter/views/components/component_home_toolbar.dart';
 import 'package:risloo_flutter/views/components/component_home_breadcump.dart';
 import 'package:risloo_flutter/views/components/component_home_button.dart';

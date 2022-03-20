@@ -20,8 +20,9 @@ class ComponentDrawerItem extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(12.0, 4.0, 12.0, 4.0),
 
       decoration: BoxDecoration(
-        color: index == currentIndex ? ResColors.risloo500 : ResColors.transparent,
         borderRadius: BorderRadius.circular(4.0),
+        color: index == currentIndex ? ResColors.risloo500 : ResColors.transparent,
+        shape: BoxShape.rectangle,
       ),
 
       child: ListTile(

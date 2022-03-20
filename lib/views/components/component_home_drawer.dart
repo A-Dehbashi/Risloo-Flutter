@@ -23,7 +23,6 @@ class ComponentHomeDrawer extends StatelessWidget {
 
       child: Directionality(
         textDirection: TextDirection.rtl,
-
         child: ListView(
           children: <Widget>[
             const ComponentDrawerHeader(),

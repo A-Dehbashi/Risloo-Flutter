@@ -22,13 +22,18 @@ class ComponentHomeButton extends StatelessWidget {
 
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4.0),
-          border: Border.all(color: ResColors.coolGray300, width: 1.0),
+          border: Border.all(
+            color: ResColors.coolGray300,
+            width: 1.0,
+          ),
           shape: BoxShape.rectangle
       ),
 
       child: Material(
         color: ResColors.transparent,
         child: IconButton(
+          highlightColor: ResColors.transparent,
+          splashColor: ResColors.coolGray300,
           icon: const Icon(
             FontAwesomeIcons.bars,
             color: ResColors.coolGray500,
