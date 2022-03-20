@@ -21,17 +21,6 @@ class ResLists {
   // Drawer Lists
   //////////////////////////////////////////////////
 
-  static const List<Widget> drawerRoutes = [
-    FragmentDashboard(),
-    FragmentCenters(),
-    FragmentSessions(),
-    FragmentUsers(),
-    FragmentSamples(),
-    FragmentBulks(),
-    FragmentScales(),
-    FragmentDownloads(),
-  ];
-
   static const List<String> drawerTitles = [
     ResStrings.drawerTitleDashboard,
     ResStrings.drawerTitleCenters,
@@ -69,13 +58,6 @@ class ResLists {
 
   // Toolbar Lists
   //////////////////////////////////////////////////
-
-  static const List<Widget> toolbarRoutes = [
-    FragmentMe(),
-    FragmentAccounting(),
-    FragmentPayments(),
-    FragmentDashboard(),
-  ];
 
   static const List<String> toolbarTitles = [
     ResStrings.toolbarTitleMe,
