@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:risloo_flutter/utils/res/res_colors.dart';
 import 'package:risloo_flutter/utils/res/res_routes.dart';
 
-import 'package:risloo_flutter/views/components/component_auth_header.dart';
 import 'package:risloo_flutter/views/components/component_auth_host.dart';
 import 'package:risloo_flutter/views/components/component_debug_note.dart';
 
@@ -11,7 +10,7 @@ class ActivityAuth extends StatefulWidget {
   const ActivityAuth({Key? key}) : super(key: key);
 
   @override
-  State<ActivityAuth> createState() => _ActivityAuthState();
+  _ActivityAuthState createState() => _ActivityAuthState();
 }
 
 class _ActivityAuthState extends State<ActivityAuth> {
@@ -27,7 +26,6 @@ class _ActivityAuthState extends State<ActivityAuth> {
             mainAxisSize: MainAxisSize.max,
             children: const <Widget>[
               ComponentHomeDebug(),
-              ComponentAuthHeader(),
               ComponentAuthHost(route: ResRoutes.fragmentAuthLogin),
             ],
         ),

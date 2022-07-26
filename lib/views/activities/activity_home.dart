@@ -9,10 +9,10 @@ class ActivityHome extends StatefulWidget {
   const ActivityHome({Key? key}) : super(key: key);
 
   @override
-  _ActivityHome createState() => _ActivityHome();
+  _ActivityHomeState createState() => _ActivityHomeState();
 }
 
-class _ActivityHome extends State<ActivityHome> {
+class _ActivityHomeState extends State<ActivityHome> {
 
   // Vars
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -30,7 +30,7 @@ class _ActivityHome extends State<ActivityHome> {
 
       child: Scaffold(
         key: _scaffoldKey,
-        backgroundColor: ResColors.coolGray50,
+        backgroundColor: ResColors.white,
 
         endDrawer: ComponentHomeDrawer(
           currentIndex: _currentIndex,
