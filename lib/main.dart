@@ -6,7 +6,7 @@ import 'package:risloo_flutter/utils/res/res_themes.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: ResRoutes.activityHome,
+    initialRoute: ResRoutes.activityAuth,
     routes: ResMaps.activityRoutes,
     theme: ResThemes.theme,
     darkTheme: ResThemes.darkTheme,

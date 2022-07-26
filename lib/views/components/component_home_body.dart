@@ -36,7 +36,7 @@ class ComponentHomeBody extends StatelessWidget {
             ],
           ),
           ComponentHomeBreadcump(currentIndex: currentIndex),
-          const ComponentHomeHost(route: ResRoutes.fragmentDashboard),
+          const ComponentHomeHost(route: ResRoutes.fragmentHomeDashboard),
         ],
       ),
     );
