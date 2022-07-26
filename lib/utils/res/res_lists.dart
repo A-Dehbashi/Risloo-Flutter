@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'package:risloo_flutter/utils/res/res_routes.dart';
 import 'package:risloo_flutter/utils/res/res_strings.dart';
 
 class ResLists {
@@ -40,6 +41,17 @@ class ResLists {
     FontAwesomeIcons.usersGear,
     FontAwesomeIcons.scaleBalanced,
     FontAwesomeIcons.circleDown,
+  ];
+
+  static const List<String> drawerRoutes = [
+    ResRoutes.fragmentHomeDashboard,
+    ResRoutes.fragmentHomeCenters,
+    ResRoutes.fragmentHomeSessions,
+    ResRoutes.fragmentHomeUsers,
+    ResRoutes.fragmentHomeSamples,
+    ResRoutes.fragmentHomeBulks,
+    ResRoutes.fragmentHomeScales,
+    ResRoutes.fragmentHomeDownloads,
   ];
 
   //////////////////////////////////////////////////
