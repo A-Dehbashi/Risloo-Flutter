@@ -36,7 +36,7 @@ class ResMaps {
   // Fragment Auth Routes
   //////////////////////////////////////////////////
 
-  static Map<String, Widget > fragmentAuthRoutes = {
+  static Map<String, Widget> fragmentAuthRoutes = {
     ResRoutes.fragmentAuthLogin: const FragmentAuthLogin(),
     ResRoutes.fragmentAuthPasswordRecover: const FragmentAuthPasswordRecover(),
     ResRoutes.fragmentAuthRegister: const FragmentAuthRegister(),
@@ -47,7 +47,7 @@ class ResMaps {
   // Fragment Home Routes
   //////////////////////////////////////////////////
 
-  static Map<String, Widget > fragmentHomeRoutes = {
+  static Map<String, Widget> fragmentHomeRoutes = {
     ResRoutes.fragmentHomeDashboard: const FragmentHomeDashboard(),
     ResRoutes.fragmentHomeCenters: const FragmentHomeCenters(),
     ResRoutes.fragmentHomeSessions: const FragmentHomeSessions(),

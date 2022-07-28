@@ -18,7 +18,7 @@ class _ActivityHomeState extends State<ActivityHome> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   int _currentIndex = 0;
-  List<int> _backstack = [0];
+  List<int> _backstackIndex = [0];
 
   // Tree
   @override
@@ -57,10 +57,10 @@ class _ActivityHomeState extends State<ActivityHome> {
     }
 
     if (index == 0) {
-      _backstack.clear();
-      _backstack = [0];
+      _backstackIndex.clear();
+      _backstackIndex = [0];
     } else {
-      _backstack.add(index);
+      _backstackIndex.add(index);
     }
 
     setState(() {
@@ -79,9 +79,9 @@ class _ActivityHomeState extends State<ActivityHome> {
       Navigator.pop(context);
 
       return Future.value(false);
-    } else if (_backstack.length > 1) {
-      _backstack.removeAt(_backstack.length - 1);
-      navigateBack(_backstack[_backstack.length - 1]);
+    } else if (_backstackIndex.length > 1) {
+      _backstackIndex.removeAt(_backstackIndex.length - 1);
+      navigateBack(_backstackIndex[_backstackIndex.length - 1]);
 
       return Future.value(false);
     } else {
