@@ -23,7 +23,7 @@ import 'package:risloo_flutter/views/fragments/home/fragment_home_users.dart';
 
 class ResMaps {
 
-  // Activity Routes
+  // Activity Maps
   //////////////////////////////////////////////////
 
   static Map<String, Widget Function(BuildContext)> activityRoutes = {
@@ -33,7 +33,7 @@ class ResMaps {
 
   //////////////////////////////////////////////////
 
-  // Fragment Auth Routes
+  // Fragment Auth Maps
   //////////////////////////////////////////////////
 
   static Map<String, Widget> fragmentAuthRoutes = {
@@ -44,7 +44,7 @@ class ResMaps {
 
   //////////////////////////////////////////////////
 
-  // Fragment Home Routes
+  // Fragment Home Maps
   //////////////////////////////////////////////////
 
   static Map<String, Widget> fragmentHomeRoutes = {
@@ -60,6 +60,34 @@ class ResMaps {
     ResRoutes.fragmentHomeMe: const FragmentHomeMe(),
     ResRoutes.fragmentHomeAccounting: const FragmentHomeAccounting(),
     ResRoutes.fragmentHomePayments: const FragmentHomePayments(),
+  };
+
+  //////////////////////////////////////////////////
+
+  // Drawer Maps
+  //////////////////////////////////////////////////
+
+  static Map<int, String> drawerRoutes = {
+    0: ResRoutes.fragmentHomeDashboard,
+    1: ResRoutes.fragmentHomeCenters,
+    2: ResRoutes.fragmentHomeSessions,
+    3: ResRoutes.fragmentHomeUsers,
+    4: ResRoutes.fragmentHomeSamples,
+    5: ResRoutes.fragmentHomeBulks,
+    6: ResRoutes.fragmentHomeScales,
+    7: ResRoutes.fragmentHomeDownloads,
+  };
+
+  //////////////////////////////////////////////////
+
+  // Toolbar Maps
+  //////////////////////////////////////////////////
+
+  static Map<int, String> toolbarRoutes = {
+    0: ResRoutes.fragmentHomeMe,
+    1: ResRoutes.fragmentHomeAccounting,
+    2: ResRoutes.fragmentHomePayments,
+    3: ResRoutes.fragmentHomeDashboard,
   };
 
   //////////////////////////////////////////////////

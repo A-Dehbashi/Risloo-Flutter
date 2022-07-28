@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:risloo_flutter/utils/res/res_colors.dart';
 import 'package:risloo_flutter/utils/res/res_fonts.dart';
 import 'package:risloo_flutter/utils/res/res_lists.dart';
+import 'package:risloo_flutter/utils/res/res_maps.dart';
 
 class ComponentHomeToolbar extends StatelessWidget {
 
@@ -98,7 +99,7 @@ class ComponentHomeToolbar extends StatelessWidget {
                         ),
                       )).toList(),
                       onChanged: (index) {
-                        callback(index);
+                        callback(ResMaps.toolbarRoutes[index]);
                       },
                     ),
                   ),

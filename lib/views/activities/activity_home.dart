@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:risloo_flutter/utils/res/res_colors.dart';
+import 'package:risloo_flutter/utils/res/res_routes.dart';
 
 import 'package:risloo_flutter/views/components/component_home_drawer.dart';
 import 'package:risloo_flutter/views/components/component_home_body.dart';
@@ -17,8 +18,8 @@ class _ActivityHomeState extends State<ActivityHome> {
   // Vars
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  int _currentIndex = 0;
-  List<int> _backstackIndex = [0];
+  String _currentRoute = ResRoutes.fragmentHomeDashboard;
+  List<String> _backstackRoute = [ResRoutes.fragmentHomeDashboard];
 
   // Tree
   @override
@@ -33,17 +34,17 @@ class _ActivityHomeState extends State<ActivityHome> {
         backgroundColor: ResColors.white,
 
         endDrawer: ComponentHomeDrawer(
-          currentIndex: _currentIndex,
-          callback: (int index) {
-            navigateTo(index);
+          currentRoute: _currentRoute,
+          callback: (String route) {
+            navigateTo(route);
           },
         ),
 
         body: ComponentHomeBody(
           scaffoldKey: _scaffoldKey,
-          currentIndex: _currentIndex,
-          callback: (int index) {
-            navigateTo(index);
+          currentRoute: _currentRoute,
+          callback: (String route) {
+            navigateTo(route);
           },
         ),
 
@@ -51,26 +52,26 @@ class _ActivityHomeState extends State<ActivityHome> {
     );
   }
 
-  void navigateTo(int index) {
+  void navigateTo(String route) {
     if (_scaffoldKey.currentState!.isEndDrawerOpen) {
       Navigator.pop(context);
     }
 
-    if (index == 0) {
-      _backstackIndex.clear();
-      _backstackIndex = [0];
+    if (route == ResRoutes.fragmentHomeDashboard) {
+      _backstackRoute.clear();
+      _backstackRoute = [ResRoutes.fragmentHomeDashboard];
     } else {
-      _backstackIndex.add(index);
+      _backstackRoute.add(route);
     }
 
     setState(() {
-      _currentIndex = index;
+      _currentRoute = route;
     });
   }
 
-  void navigateBack(int index) {
+  void navigateBack(String route) {
     setState(() {
-      _currentIndex = index;
+      _currentRoute = route;
     });
   }
 
@@ -79,9 +80,9 @@ class _ActivityHomeState extends State<ActivityHome> {
       Navigator.pop(context);
 
       return Future.value(false);
-    } else if (_backstackIndex.length > 1) {
-      _backstackIndex.removeAt(_backstackIndex.length - 1);
-      navigateBack(_backstackIndex[_backstackIndex.length - 1]);
+    } else if (_backstackRoute.length > 1) {
+      _backstackRoute.removeAt(_backstackRoute.length - 1);
+      navigateBack(_backstackRoute[_backstackRoute.length - 1]);
 
       return Future.value(false);
     } else {

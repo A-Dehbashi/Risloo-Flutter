@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:risloo_flutter/utils/res/res_colors.dart';
 import 'package:risloo_flutter/utils/res/res_fonts.dart';
 import 'package:risloo_flutter/utils/res/res_lists.dart';
+import 'package:risloo_flutter/utils/res/res_maps.dart';
 
 class ComponentDrawerItem extends StatelessWidget {
 
   // Vars
   final Function callback;
-  final int index, currentIndex;
+  final int index;
+  final String currentRoute;
 
   // Constructor
-  const ComponentDrawerItem({Key? key, required this.callback, required this.index, required this.currentIndex}) : super(key: key);
+  const ComponentDrawerItem({Key? key, required this.callback, required this.index, required this.currentRoute}) : super(key: key);
 
   // Tree
   @override
@@ -21,7 +23,7 @@ class ComponentDrawerItem extends StatelessWidget {
 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4.0),
-        color: index == currentIndex ? ResColors.risloo500 : ResColors.transparent,
+        color: currentRoute == ResMaps.drawerRoutes[index] ? ResColors.risloo500 : ResColors.transparent,
         shape: BoxShape.rectangle,
       ),
 
@@ -31,7 +33,7 @@ class ComponentDrawerItem extends StatelessWidget {
         title: Text(
           ResLists.drawerTitles[index],
           style: TextStyle(
-            color: index == currentIndex ? ResColors.white : ResColors.coolGray900,
+            color: currentRoute == ResMaps.drawerRoutes[index] ? ResColors.white : ResColors.coolGray900,
             fontSize: 14.0,
             fontFamily: ResFonts.danaMedium,
           ),
@@ -39,18 +41,18 @@ class ComponentDrawerItem extends StatelessWidget {
         subtitle: Text(
           ResLists.drawerDescs[index],
           style: TextStyle(
-            color: index == currentIndex ? ResColors.white : ResColors.coolGray600,
+            color: currentRoute == ResMaps.drawerRoutes[index] ? ResColors.white : ResColors.coolGray600,
             fontSize: 10.0,
             fontFamily: ResFonts.danaLight,
           ),
         ),
         leading: Icon(
           ResLists.drawerIcons[index],
-          color: index == currentIndex ? ResColors.white : ResColors.coolGray900,
+          color: currentRoute == ResMaps.drawerRoutes[index] ? ResColors.white : ResColors.coolGray900,
           size: 20.0,
         ),
         onTap: () {
-          callback(index);
+          callback(ResMaps.drawerRoutes[index]);
         },
       ),
     );

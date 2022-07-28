@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:risloo_flutter/utils/res/res_routes.dart';
-
 import 'package:risloo_flutter/views/components/component_debug_note.dart';
 import 'package:risloo_flutter/views/components/component_home_toolbar.dart';
 import 'package:risloo_flutter/views/components/component_home_breadcump.dart';
@@ -13,10 +11,10 @@ class ComponentHomeBody extends StatelessWidget {
   // Vars
   final GlobalKey<ScaffoldState> scaffoldKey;
   final Function callback;
-  final int currentIndex;
+  final String currentRoute;
 
   // Constructor
-  const ComponentHomeBody({Key? key, required this.scaffoldKey, required this.callback, required this.currentIndex}) : super(key: key);
+  const ComponentHomeBody({Key? key, required this.scaffoldKey, required this.callback, required this.currentRoute}) : super(key: key);
 
   // Tree
   @override
@@ -35,8 +33,8 @@ class ComponentHomeBody extends StatelessWidget {
               ComponentHomeButton(scaffoldKey: scaffoldKey),
             ],
           ),
-          ComponentHomeBreadcump(currentIndex: currentIndex),
-          ComponentHomeHost(currentIndex: currentIndex),
+          ComponentHomeBreadcump(currentRoute: currentRoute),
+          ComponentHomeHost(currentRoute: currentRoute),
         ],
       ),
     );

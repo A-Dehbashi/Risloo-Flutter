@@ -10,10 +10,10 @@ class ComponentHomeDrawer extends StatelessWidget {
 
   // Vars
   final Function callback;
-  final int currentIndex;
+  final String currentRoute;
 
   // Constructor
-  const ComponentHomeDrawer({Key? key, required this.callback, required this.currentIndex}) : super(key: key);
+  const ComponentHomeDrawer({Key? key, required this.callback, required this.currentRoute}) : super(key: key);
 
   // Tree
   @override
@@ -34,7 +34,7 @@ class ComponentHomeDrawer extends StatelessWidget {
                   return ComponentDrawerItem(
                     index: index,
                     callback: callback,
-                    currentIndex: currentIndex,
+                    currentRoute: currentRoute,
                   );
                 },
               ),
