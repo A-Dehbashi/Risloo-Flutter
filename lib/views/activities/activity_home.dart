@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:risloo_flutter/utils/res/res_colors.dart';
 import 'package:risloo_flutter/utils/res/res_routes.dart';
 
-import 'package:risloo_flutter/views/components/component_home_drawer.dart';
-import 'package:risloo_flutter/views/components/component_home_body.dart';
+import 'package:risloo_flutter/views/components/home/component_home_drawer.dart';
+import 'package:risloo_flutter/views/components/home/component_home_body.dart';
 
 class ActivityHome extends StatefulWidget {
   const ActivityHome({Key? key}) : super(key: key);

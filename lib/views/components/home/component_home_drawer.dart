@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:risloo_flutter/utils/res/res_colors.dart';
 import 'package:risloo_flutter/utils/res/res_lists.dart';
 
-import 'package:risloo_flutter/views/components/component_drawer_item.dart';
-import 'package:risloo_flutter/views/components/component_drawer_header.dart';
+import 'package:risloo_flutter/views/components/home/component_drawer_item.dart';
+import 'package:risloo_flutter/views/components/home/component_drawer_header.dart';
 
 class ComponentHomeDrawer extends StatelessWidget {
 
